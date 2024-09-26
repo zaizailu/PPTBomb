@@ -1,0 +1,59 @@
+::maintitle,主标题
+::title,标题
+::subtitle,分标题
+::mainauthor,主作者
+::author,作者1,作者2
+::theme,CambridgeUS
+::bib
+content{
+    _测试部分{
+        #M,无图片测试页{
+            你可以用“\#M,页标题”命令创建一个没图片的页面。（M意思是没图）
+            !测试板块{
+                你可以用“!板块标题”命令创建一个板块。
+                -{
+                    你可以用“-”命令创建一个无序列表
+                    列表项\cite{involution}
+                    你可以用“cite”命令进行引用（需要配置好bib文件，并在content命令前使用过“::bib”命令）
+                }
+                -1{
+                    你可以用“-1”命令创建一个无序列表
+                    序列表项2
+                }
+                $$
+                T' = \dfrac{M}{m} + \dfrac{9999}{m} \times t < Mt, \quad if\ m > \dfrac{1}{t} + \dfrac{9999}{M}
+                $$
+                插入数学公式与latex完全兼容
+            }
+        }
+        #B,图文并排版面测试{
+            ::ratio,0.45
+            你可以用“\#B,页标题”命令创建一个图片与文字并排的页面。（B意思是并排）
+            用“::ratio,比例”命令调整图片占整个页面的比例。
+            -{
+                列表项1
+                列表项2
+            }
+            ::picture,并排测试图,figure/picture1.jpg
+            你可以用"::picture,图片标题,图片路径"命令插入图片。（图文并排版面只允许一张图）
+        }
+        #S,图文竖排版面测试{
+            ::ratio,0.45
+            你可以用“\#S,页标题”命令创建一个图片与文字竖排的页面。（S意思是Shupai）\\
+            ::picture,竖排测试图,figure/picture2.jpg
+            你可以用"::picture,图片标题,图片路径"命令插入图片。（图文竖排版面只允许一张图）
+        }
+        #D,多图版面测试{
+            ::ratio,0.4
+            你可以用“\#D,页标题”命令创建一个有多张的页面。（D意思是多图DuoTu）
+            -1{
+                列表项1
+                列表项2
+                列表项3
+            }
+            ::picture,竖排测试图,figure/picture3.jpg
+            ::picture,竖排测试图,figure/picture4.jpg
+            你可以用"::picture,图片标题,图片路径"命令插入图片。
+        }
+    }
+}
